@@ -1,0 +1,86 @@
+---
+layout: page
+title: 分类
+permalink: /categories/
+---
+
+<div class="categories-page">
+  {%- for category in site.categories -%}
+    <div class="category-section">
+      <h2 id="{{ category[0] | slugify }}">
+        {{ category[0] }} 
+        <span class="post-count">({{ category[1].size }})</span>
+      </h2>
+      <ul class="post-list">
+        {%- for post in category[1] -%}
+          <li>
+            <span class="post-meta">{{ post.date | date: "%Y年%-m月%-d日" }}</span>
+            <h3>
+              <a class="post-link" href="{{ post.url | relative_url }}">
+                {{ post.title | escape }}
+              </a>
+            </h3>
+            {%- if post.tags -%}
+              <div class="post-tags">
+                {%- for tag in post.tags -%}
+                  <span class="tag">{{ tag }}</span>
+                {%- endfor -%}
+              </div>
+            {%- endif -%}
+          </li>
+        {%- endfor -%}
+      </ul>
+    </div>
+  {%- endfor -%}
+</div>
+
+<style>
+.categories-page {
+  max-width: 800px;
+}
+
+.category-section {
+  margin-bottom: 40px;
+}
+
+.category-section h2 {
+  border-bottom: 2px solid var(--border-color);
+  padding-bottom: 8px;
+  margin-bottom: 20px;
+}
+
+.post-count {
+  color: var(--text-muted);
+  font-size: 0.8em;
+  font-weight: normal;
+}
+
+.post-list li {
+  margin-bottom: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.post-list li:last-child {
+  border-bottom: none;
+}
+
+.post-meta {
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
+.post-tags {
+  margin-top: 8px;
+}
+
+.post-tags .tag {
+  display: inline-block;
+  padding: 2px 6px;
+  background: var(--bg-secondary-color);
+  color: var(--text-color);
+  border-radius: 4px;
+  font-size: 12px;
+  margin-right: 6px;
+}
+</style>

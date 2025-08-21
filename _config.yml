@@ -30,6 +30,8 @@ minima:
 # 顶部导航显示的页面
 header_pages:
   - about.md
+  - categories.html
+  - tags.html
 
 # 插件（GitHub Pages 支持）
 plugins:
