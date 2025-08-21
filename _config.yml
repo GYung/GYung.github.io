@@ -1,0 +1,63 @@
+# 站点基础配置
+url: "https://gyung.github.io"
+baseurl: ""
+lang: zh-CN
+locale: zh_CN
+timezone: Asia/Shanghai
+
+# 标题与描述
+title: "GYung 的博客"
+description: "记录学习、开发与生活碎片"
+author:
+  name: "GYung"
+  email: ""
+  url: "https://gyung.github.io"
+
+# 主题与皮肤
+# GitHub Pages 内置 minima 主题
+# 皮肤可选：classic, dark, solarized, auto
+# 使用 auto 随系统深浅色模式
+
+theme: minima
+minima:
+  skin: auto
+  social_links:
+    - platform: github
+      user_url: "https://github.com/GYung"
+    - platform: rss
+      user_url: "/feed.xml"
+
+# 顶部导航显示的页面
+header_pages:
+  - about.md
+
+# 插件（GitHub Pages 支持）
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Markdown 与语法高亮
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+highlighter: rouge
+
+# 默认 Front Matter
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "GYung"
+      comments: false
+
+# 排除不需要构建的文件
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - .github
+  - README.md

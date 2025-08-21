@@ -1,0 +1,30 @@
+---
+---
+@import "minima";
+
+/* 自定义：中文字体与代码区块样式 */
+:root {
+  --body-max-width: 860px;
+}
+
+.site-header .wrapper,
+.site-footer .wrapper,
+.page-content .wrapper {
+  max-width: var(--body-max-width);
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Noto Sans CJK SC", "Microsoft YaHei", "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+}
+
+pre, code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+/* 首页文章列表标题更清晰 */
+.post-list > li {
+  margin-bottom: 1.25rem;
+}
+.post-list h3 {
+  font-size: 1.25rem;
+}
