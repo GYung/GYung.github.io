@@ -13,25 +13,62 @@ author:
   email: ""
   url: "https://gyung.github.io"
 
-# 主题与皮肤
-# GitHub Pages 内置 minima 主题
-# 皮肤可选：classic, dark, solarized, auto
-# 使用 auto 随系统深浅色模式
+# Beautiful Jekyll 主题配置
+# 主题：https://github.com/daattali/beautiful-jekyll
 
-theme: minima
-minima:
-  skin: auto
-  social_links:
-    - platform: github
-      user_url: "https://github.com/GYung"
-    - platform: rss
-      user_url: "/feed.xml"
+# 站点信息
+title: "GYung 的技术博客"
+description: "分享前端开发、全栈技术、效率工具与学习心得"
+author: "GYung"
+avatar-img: "https://avatars.githubusercontent.com/GYung"
+email: ""
+url: "https://gyung.github.io"
+baseurl: ""
 
-# 顶部导航显示的页面
-header_pages:
-  - about.md
-  - categories.html
-  - tags.html
+# 社交链接
+social-network-links:
+  github: GYung
+  twitter: ""
+  facebook: ""
+  linkedin: ""
+  xing: ""
+  instagram: ""
+  youtube: ""
+  snapchat: ""
+  googlescholar: ""
+  orcid: ""
+  researchgate: ""
+  email: ""
+
+# 导航链接
+navbar-links:
+  关于: "about"
+  分类: "categories"
+  标签: "tags"
+  归档: "archive"
+
+# 侧边栏配置
+sidebar-about-description: "前端开发工程师，专注于现代 Web 技术栈。热爱分享技术心得，记录学习成长。"
+sidebar-avatar: "https://avatars.githubusercontent.com/GYung"
+
+# 评论系统 (可选)
+comments:
+  provider: disqus
+  disqus:
+    shortname: ""
+
+# 分析工具 (可选)
+analytics:
+  provider: google
+  google:
+    tracking_id: ""
+
+# 其他设置
+lang: zh-CN
+locale: zh_CN
+timezone: Asia/Shanghai
+
+# Beautiful Jekyll 会自动处理导航
 
 # 插件（GitHub Pages 支持）
 plugins:
